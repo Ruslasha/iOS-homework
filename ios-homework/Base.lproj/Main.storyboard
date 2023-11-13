@@ -157,50 +157,41 @@
             </objects>
             <point key="canvasLocation" x="1019" y="-321"/>
         </scene>
-        <!--task3ViewController-->
+        <!--ParentViewController-->
         <scene sceneID="chT-dC-K7I">
             <objects>
-                <viewController storyboardIdentifier="task3ViewController" title="task3ViewController" id="Hdu-lZ-VmX" customClass="task3ViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParentViewController" title="ParentViewController" id="Hdu-lZ-VmX" customClass="ParentViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vbf-pf-DwB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vld-cd-WCv">
-                                <rect key="frame" x="16" y="472" width="361" height="244"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l83-g5-eN0" customClass="ChildView" customModule="ios_homework" customModuleProvider="target">
+                                <rect key="frame" x="16" y="508" width="361" height="195"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="Qua-ZV-qKs" kind="embed" id="lXt-T1-wGf"/>
+                                    <segue destination="iJd-as-JSH" kind="embed" id="zYv-ig-tXo"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv9-VJ-YHL">
-                                <rect key="frame" x="97" y="99" width="198" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54k-4s-hIj">
+                                <rect key="frame" x="112" y="96" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Зеленый"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
                                 <connections>
-                                    <action selector="ChangeGreen:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="TXA-3w-idK"/>
-                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="ghf-be-A3O"/>
+                                    <action selector="DidTapGreenButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="7Sz-c7-fOe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33U-wZ-TXz">
-                                <rect key="frame" x="97" y="179" width="198" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-YS-6yw">
+                                <rect key="frame" x="112" y="193" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Желтый"/>
-                                <connections>
-                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="AYZ-Fb-TRu"/>
-                                    <action selector="ChangeYellow:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="M6R-6n-RPV"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="Желтый"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C4-4c-b4R">
-                                <rect key="frame" x="97" y="260" width="198" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-Xr-ptC">
+                                <rect key="frame" x="112" y="292" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Пурпурный"/>
-                                <connections>
-                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="BFu-8K-13m"/>
-                                    <action selector="ChangePurple:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="Zx9-1m-vFV"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="Красный"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G9u-OZ-U93"/>
@@ -210,54 +201,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U04-bu-pw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2507.6335877862593" y="661.97183098591552"/>
+            <point key="canvasLocation" x="2626.7175572519081" y="641.54929577464793"/>
         </scene>
-        <!--ViewConteiner-->
-        <scene sceneID="QUP-Vc-017">
+        <!--ChildViewController-->
+        <scene sceneID="ElA-rL-YqL">
             <objects>
-                <viewController storyboardIdentifier="ViewConteiner" title="ViewConteiner" id="Qua-ZV-qKs" customClass="ViewConteiner" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W46-CD-wk0">
-                        <rect key="frame" x="0.0" y="0.0" width="361" height="244"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRz-TV-wVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ChildViewController" title="ChildViewController" id="iJd-as-JSH" customClass="ChildViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3B-hs-exg">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="195"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCf-8v-RES">
-                                <rect key="frame" x="16" y="18" width="198" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zx-4h-n5K">
+                                <rect key="frame" x="0.0" y="0.0" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Зеленый"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
                                 <connections>
-                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="K9E-Ng-LFn"/>
-                                    <action selector="ChangeGreen:" destination="Qua-ZV-qKs" eventType="touchUpInside" id="fnW-Z6-wN3"/>
+                                    <action selector="DidTapGreenButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="FsB-hT-IjV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-20-xkw">
-                                <rect key="frame" x="16" y="91" width="198" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-rp-zxJ">
+                                <rect key="frame" x="0.0" y="128" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Желтый"/>
-                                <connections>
-                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="hUw-Kw-hxT"/>
-                                    <action selector="ChangeYellow:" destination="Qua-ZV-qKs" eventType="touchUpInside" id="dzK-dP-aIk"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="Красный"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldd-y8-2DM">
-                                <rect key="frame" x="16" y="162" width="198" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-II-UND">
+                                <rect key="frame" x="177" y="0.0" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Пурпурный"/>
-                                <connections>
-                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="yYS-GS-ciK"/>
-                                    <action selector="ChangePurple:" destination="Qua-ZV-qKs" eventType="touchUpInside" id="FpH-O3-1iU"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="Желтый"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="oOS-wq-eHR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="xb2-cg-UdL"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ie-kv-G8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3479" y="720"/>
+            <point key="canvasLocation" x="3505" y="548"/>
         </scene>
         <!--Task 1-->
         <scene sceneID="8dY-m4-p5S">
@@ -366,6 +348,20 @@
             </objects>
             <point key="canvasLocation" x="3532" y="-89"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="VYv-9U-Pwc">
+            <objects>
+                <viewController id="E8O-un-VcJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2W-Gm-Edl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gl-pr-yWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="548"/>
+        </scene>
     </scenes>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
@@ -380,6 +376,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

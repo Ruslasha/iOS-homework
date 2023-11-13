@@ -7,13 +7,9 @@
 
 import UIKit
 
-protocol ColorDelegat: class {
+protocol ColorDelegat: AnyObject {
     func updateColor(color: String)
 }
-
-//protocol ColorDelegate: class {
-//    func updateColor(color: String)
-//}
 
 class task2ViewController: UIViewController {
     
@@ -27,7 +23,6 @@ class task2ViewController: UIViewController {
     }
     
     @IBAction func DidTapGreenButton(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "ChangeColorViewController", bundle: nil)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangeColorViewController") as! ChangeColorViewController
         vc.colorDelegate = self
         if let unwrappedTextLabel = textLabel.text {
@@ -35,7 +30,6 @@ class task2ViewController: UIViewController {
         } else {
             return
         }
-//        present(vc, animated: true)
         show(vc, sender: nil)
         
 

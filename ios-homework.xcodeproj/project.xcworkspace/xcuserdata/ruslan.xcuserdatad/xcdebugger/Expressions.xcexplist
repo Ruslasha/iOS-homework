@@ -13,5 +13,21 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "ParentViewController.DidTapGreenButton(_:):task3ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nestedViewController.view.backgroundColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "task3ViewController.ChangeGreen(_:):task3ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "vc.view.backgroundColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
