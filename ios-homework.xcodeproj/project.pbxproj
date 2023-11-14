@@ -14,6 +14,12 @@
 		44FBD0A12AFE05610061F6A7 /* ios_homework.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD09F2AFE05610061F6A7 /* ios_homework.xcdatamodeld */; };
 		44FBD0A32AFE05630061F6A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FBD0A22AFE05630061F6A7 /* Assets.xcassets */; };
 		44FBD0A62AFE05630061F6A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FBD0A42AFE05630061F6A7 /* LaunchScreen.storyboard */; };
+		44FDD5C12B036B5200A553B3 /* task1ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD5C02B036B5200A553B3 /* task1ViewController.storyboard */; };
+		44FDD5C32B036B6A00A553B3 /* task2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD5C22B036B6A00A553B3 /* task2ViewController.storyboard */; };
+		44FDD5C52B036B7600A553B3 /* task3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD5C42B036B7600A553B3 /* task3ViewController.storyboard */; };
+		44FDD5C72B036B8500A553B3 /* task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD5C62B036B8500A553B3 /* task1ViewController.swift */; };
+		44FDD5C92B036B9000A553B3 /* task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD5C82B036B9000A553B3 /* task2ViewController.swift */; };
+		44FDD5CB2B036BBD00A553B3 /* task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD5CA2B036BBD00A553B3 /* task3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		44FBD0A22AFE05630061F6A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44FBD0A52AFE05630061F6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44FBD0A72AFE05630061F6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FDD5C02B036B5200A553B3 /* task1ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = task1ViewController.storyboard; sourceTree = "<group>"; };
+		44FDD5C22B036B6A00A553B3 /* task2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = task2ViewController.storyboard; sourceTree = "<group>"; };
+		44FDD5C42B036B7600A553B3 /* task3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = task3ViewController.storyboard; sourceTree = "<group>"; };
+		44FDD5C62B036B8500A553B3 /* task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task1ViewController.swift; sourceTree = "<group>"; };
+		44FDD5C82B036B9000A553B3 /* task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task2ViewController.swift; sourceTree = "<group>"; };
+		44FDD5CA2B036BBD00A553B3 /* task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,9 @@
 		44FBD0952AFE05610061F6A7 /* ios-homework */ = {
 			isa = PBXGroup;
 			children = (
+				44FDD5BE2B036B0A00A553B3 /* tsk1 */,
+				44FDD5BC2B036AFC00A553B3 /* tsk2 */,
+				44FDD5BF2B036B1000A553B3 /* tsk3 */,
 				44FBD0962AFE05610061F6A7 /* AppDelegate.swift */,
 				44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */,
 				44FBD09A2AFE05610061F6A7 /* ViewController.swift */,
@@ -68,6 +83,33 @@
 				44FBD09F2AFE05610061F6A7 /* ios_homework.xcdatamodeld */,
 			);
 			path = "ios-homework";
+			sourceTree = "<group>";
+		};
+		44FDD5BC2B036AFC00A553B3 /* tsk2 */ = {
+			isa = PBXGroup;
+			children = (
+				44FDD5C22B036B6A00A553B3 /* task2ViewController.storyboard */,
+				44FDD5C82B036B9000A553B3 /* task2ViewController.swift */,
+			);
+			path = tsk2;
+			sourceTree = "<group>";
+		};
+		44FDD5BE2B036B0A00A553B3 /* tsk1 */ = {
+			isa = PBXGroup;
+			children = (
+				44FDD5C02B036B5200A553B3 /* task1ViewController.storyboard */,
+				44FDD5C62B036B8500A553B3 /* task1ViewController.swift */,
+			);
+			path = tsk1;
+			sourceTree = "<group>";
+		};
+		44FDD5BF2B036B1000A553B3 /* tsk3 */ = {
+			isa = PBXGroup;
+			children = (
+				44FDD5C42B036B7600A553B3 /* task3ViewController.storyboard */,
+				44FDD5CA2B036BBD00A553B3 /* task3ViewController.swift */,
+			);
+			path = tsk3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +170,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FDD5C52B036B7600A553B3 /* task3ViewController.storyboard in Resources */,
+				44FDD5C12B036B5200A553B3 /* task1ViewController.storyboard in Resources */,
 				44FBD0A62AFE05630061F6A7 /* LaunchScreen.storyboard in Resources */,
+				44FDD5C32B036B6A00A553B3 /* task2ViewController.storyboard in Resources */,
 				44FBD0A32AFE05630061F6A7 /* Assets.xcassets in Resources */,
 				44FBD09E2AFE05610061F6A7 /* Main.storyboard in Resources */,
 			);
@@ -143,6 +188,9 @@
 			files = (
 				44FBD09B2AFE05610061F6A7 /* ViewController.swift in Sources */,
 				44FBD0972AFE05610061F6A7 /* AppDelegate.swift in Sources */,
+				44FDD5CB2B036BBD00A553B3 /* task3ViewController.swift in Sources */,
+				44FDD5C92B036B9000A553B3 /* task2ViewController.swift in Sources */,
+				44FDD5C72B036B8500A553B3 /* task1ViewController.swift in Sources */,
 				44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */,
 				44FBD0A12AFE05610061F6A7 /* ios_homework.xcdatamodeld in Sources */,
 			);
@@ -296,6 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +372,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
