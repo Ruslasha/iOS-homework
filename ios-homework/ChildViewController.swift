@@ -1,36 +1,19 @@
-
-//  ChildViewController.swift
 import UIKit
 
-protocol QDelegate: AnyObject {
-    func updateColor(color: UIColor)
+protocol ChildToParent {
+    func changeColor(color:UIColor)
 }
 
 class ChildViewController: UIViewController {
-    
-    var cColor: UIColor = .blue
-    weak var cDelegate: CDelegate?
-    override func viewDidLoad() {
-            super.viewDidLoad()
-//        cDelegate?.updateColor(color: cColor)
-        }
-        
-    @IBAction func DidTapGreenButton(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
-        vc.qDelegate = self
-        vc.qColor = .green
-        vc.viewDidLoad()
 
-    }
+    @IBOutlet var labelContainer: UILabel!
+    var childToParent:ChildToParent?
+
+    @IBAction func button_Master(sender: AnyObject) {
+        childToParent?.changeColor(color: .green)
     }
 
-
-
-extension ChildViewController: QDelegate {
-    func updateColor(color: UIColor) {
+    func changeColor(color:UIColor) {
         view.backgroundColor = color
     }
-    
-    
 }
-    

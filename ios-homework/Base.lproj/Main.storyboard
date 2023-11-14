@@ -169,7 +169,7 @@
                                 <rect key="frame" x="16" y="508" width="361" height="195"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="iJd-as-JSH" kind="embed" id="zYv-ig-tXo"/>
+                                    <segue destination="iJd-as-JSH" kind="embed" identifier="EmbedSegue" id="zYv-ig-tXo"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54k-4s-hIj">
@@ -178,7 +178,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
                                 <connections>
-                                    <action selector="DidTapGreenButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="7Sz-c7-fOe"/>
+                                    <action selector="tap:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="6xI-Wn-fuF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-YS-6yw">
@@ -198,6 +198,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="task 3" image="folder.fill" catalog="system" id="r8B-7K-Ywx"/>
+                    <connections>
+                        <outlet property="childView" destination="l83-g5-eN0" id="cXr-qy-Y9O"/>
+                        <segue destination="iJd-as-JSH" kind="modal" identifier="childViewSegue" id="vyP-1a-tZN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U04-bu-pw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,7 +222,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
                                 <connections>
-                                    <action selector="DidTapGreenButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="FsB-hT-IjV"/>
+                                    <action selector="button_MasterWithSender:" destination="iJd-as-JSH" eventType="touchUpInside" id="hjn-ZJ-0ch"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-rp-zxJ">
@@ -237,6 +241,7 @@
                         <viewLayoutGuide key="safeArea" id="xb2-cg-UdL"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PBc-o2-fUJ"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="3505" y="548"/>
@@ -363,6 +368,9 @@
             <point key="canvasLocation" x="1844" y="548"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zYv-ig-tXo"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">

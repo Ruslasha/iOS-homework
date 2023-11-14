@@ -3,6 +3,33 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ChildViewController.didTapGreenButton(_:):ChildViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cDelegate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ParentViewController.updateColor(color:):task3ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.view.backgroundColor ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ChildViewController.viewDidLoad():ChildViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ChildViewController.updateColor(color:):ChildViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.backgroundColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ChangeColorViewController.ChangeBlue(_:):ChangeColorViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -22,10 +49,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ChildViewController.fColor(color:):ChildViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.backgroundColor">
+            </PersistentString>
+            <PersistentString
+               value = "color">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "task3ViewController.ChangeGreen(_:):task3ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "vc.view.backgroundColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ParentViewController.prepare(for:sender:):task3ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.identifier">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
