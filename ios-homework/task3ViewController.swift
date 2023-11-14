@@ -15,12 +15,16 @@ class ParentViewController: UIViewController, ChildToParent {
             childViewController!.childToParent = self
         }
     }
-
-    @IBAction func button_Container(sender: AnyObject) {
+    
+    @IBAction func tapGreenButton(_ sender: Any) {
         childViewController?.changeColor(color: .green)
+    }
+    @IBAction func tapYellowButton(_ sender: Any) {
+        childViewController?.changeColor(color: .yellow)
     }
     
-    @IBAction func tap(_ sender: Any) {
-        childViewController?.changeColor(color: .green)
+    @IBAction func tapRedButton(_ sender: Any) {
+        childViewController?.changeColor(color: .red)
     }
+
 }

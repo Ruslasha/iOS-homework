@@ -178,7 +178,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
                                 <connections>
-                                    <action selector="tap:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="6xI-Wn-fuF"/>
+                                    <action selector="tapGreenButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="BdF-qm-NFr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-YS-6yw">
@@ -186,12 +186,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Желтый"/>
+                                <connections>
+                                    <action selector="tapYellowButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="elx-kb-ZQD"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-Xr-ptC">
-                                <rect key="frame" x="112" y="292" width="169" height="67"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vL-zK-s6x">
+                                <rect key="frame" x="112" y="285" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Красный"/>
+                                <connections>
+                                    <action selector="tapRedButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="jfV-RJ-PCe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G9u-OZ-U93"/>
@@ -222,7 +228,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
                                 <connections>
-                                    <action selector="button_MasterWithSender:" destination="iJd-as-JSH" eventType="touchUpInside" id="hjn-ZJ-0ch"/>
+                                    <action selector="tapGreenButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="jUa-qd-94L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-rp-zxJ">
@@ -230,16 +236,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Красный"/>
+                                <connections>
+                                    <action selector="tapRedButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="udN-LC-TPY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-II-UND">
                                 <rect key="frame" x="177" y="0.0" width="169" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Желтый"/>
+                                <connections>
+                                    <action selector="tapYellowButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="CDp-c4-722"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xb2-cg-UdL"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PBc-o2-fUJ"/>
                 </viewController>
@@ -384,9 +396,6 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
