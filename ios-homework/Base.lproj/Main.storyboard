@@ -1,24 +1,401 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHT-B1-ume">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Task 2-->
+        <scene sceneID="reA-hH-eHA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="task2ViewController" id="Cfp-mD-tPf" customClass="task2ViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UEH-DZ-6Bc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="yJR-jB-qBx">
+                                <rect key="frame" x="59" y="144" width="275" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBw-lN-ugP">
+                                <rect key="frame" x="92" y="281" width="208" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Изменить"/>
+                                <connections>
+                                    <action selector="DidTapGreenButton:" destination="Cfp-mD-tPf" eventType="touchUpInside" id="XOj-rJ-dIb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qTG-6r-bQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Task 2" image="folder.fill" catalog="system" id="duT-Fl-yhQ"/>
+                    <navigationItem key="navigationItem" id="RhD-dP-FnP"/>
+                    <connections>
+                        <outlet property="textLabel" destination="yJR-jB-qBx" id="4Df-cC-St8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWq-lW-0bF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626.7175572519081" y="-89.436619718309871"/>
+        </scene>
+        <!--task1ViewController-->
+        <scene sceneID="2pu-o1-tAf">
+            <objects>
+                <viewController storyboardIdentifier="task1ViewController" title="task1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SPG-KU-qu8" customClass="task1ViewController" customModule="ios_homework" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NTy-Vc-2oC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-AI-8LJ">
+                                <rect key="frame" x="97" y="136" width="199" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="9lX-DZ-TFx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Green">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="DidTapGreenButton:" destination="SPG-KU-qu8" eventType="touchUpInside" id="l6B-MQ-Vpo"/>
+                                    <action selector="greenButtons:" destination="MIW-nT-Nm9" eventType="touchUpInside" id="PCp-Ni-0E1"/>
+                                    <action selector="sf:" destination="MIW-nT-Nm9" eventType="touchUpInside" id="rJ5-qT-HMg"/>
+                                    <segue destination="wOS-hj-5AF" kind="show" id="Vwg-Gf-3fE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-wz-sTY">
+                                <rect key="frame" x="97" y="292" width="199" height="97"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Blue">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="EI4-hN-kR7" kind="show" id="scp-Tx-qel"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6n-YA-2CY">
+                                <rect key="frame" x="97" y="452" width="199" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="sam-iu-YQK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Red">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ats-Eb-LsR" kind="show" id="fnH-EA-5j4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rqp-jZ-9aj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="top" secondItem="Dxh-wz-sTY" secondAttribute="bottom" constant="63" id="4It-hZ-iAg"/>
+                            <constraint firstItem="GPV-AI-8LJ" firstAttribute="top" secondItem="Rqp-jZ-9aj" secondAttribute="top" constant="33" id="64c-eb-4lJ"/>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="leading" secondItem="GPV-AI-8LJ" secondAttribute="leading" id="6d9-R0-ebh"/>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="leading" secondItem="Dxh-wz-sTY" secondAttribute="leading" id="FlS-nd-rsm"/>
+                            <constraint firstItem="Dxh-wz-sTY" firstAttribute="top" secondItem="GPV-AI-8LJ" secondAttribute="bottom" constant="59" id="MRR-6W-l5U"/>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="leading" secondItem="Rqp-jZ-9aj" secondAttribute="leading" constant="97" id="R6z-Hv-nzw"/>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="trailing" secondItem="GPV-AI-8LJ" secondAttribute="trailing" id="ReH-S7-rnd"/>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="centerX" secondItem="NTy-Vc-2oC" secondAttribute="centerX" id="ShP-aL-pa0"/>
+                            <constraint firstItem="Rqp-jZ-9aj" firstAttribute="bottom" secondItem="k6n-YA-2CY" secondAttribute="bottom" constant="220" id="ttT-RI-dCa"/>
+                            <constraint firstItem="k6n-YA-2CY" firstAttribute="trailing" secondItem="Dxh-wz-sTY" secondAttribute="trailing" id="wPV-w4-Q1i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aH4-9m-0e9"/>
+                    <connections>
+                        <outlet property="blueButton" destination="Dxh-wz-sTY" id="foO-j9-g4P"/>
+                        <outlet property="greenButton" destination="GPV-AI-8LJ" id="6X5-bq-bca"/>
+                        <outlet property="redButton" destination="k6n-YA-2CY" id="JM2-Mq-H0G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pp-vf-CA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="MIW-nT-Nm9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="-1099"/>
+        </scene>
+        <!--GreenViewController-->
+        <scene sceneID="V1h-9i-LUU">
+            <objects>
+                <viewController storyboardIdentifier="GreenViewController" title="GreenViewController" id="wOS-hj-5AF" customClass="GreenViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XbX-z5-xER">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="u27-nI-4oq"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Guj-Vj-vvK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5G-cM-a6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4891" y="-1645"/>
+        </scene>
+        <!--TabBarController-->
+        <scene sceneID="w9F-9i-Ob5">
+            <objects>
+                <tabBarController title="TabBarController" id="SHT-B1-ume" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mN0-tF-NdS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BTn-40-7vd" kind="relationship" relationship="viewControllers" id="KDN-wu-FVS"/>
+                        <segue destination="Cfp-mD-tPf" kind="relationship" relationship="viewControllers" id="zt4-Ol-ypJ"/>
+                        <segue destination="Hdu-lZ-VmX" kind="relationship" relationship="viewControllers" id="bX6-TL-eGI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I52-pQ-s5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="-321"/>
+        </scene>
+        <!--ParentViewController-->
+        <scene sceneID="chT-dC-K7I">
+            <objects>
+                <viewController storyboardIdentifier="ParentViewController" title="ParentViewController" id="Hdu-lZ-VmX" customClass="ParentViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vbf-pf-DwB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l83-g5-eN0" customClass="ChildView" customModule="ios_homework" customModuleProvider="target">
+                                <rect key="frame" x="16" y="508" width="361" height="195"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="iJd-as-JSH" kind="embed" identifier="EmbedSegue" id="zYv-ig-tXo"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54k-4s-hIj">
+                                <rect key="frame" x="112" y="96" width="169" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
+                                <connections>
+                                    <action selector="tapGreenButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="BdF-qm-NFr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-YS-6yw">
+                                <rect key="frame" x="112" y="193" width="169" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Желтый"/>
+                                <connections>
+                                    <action selector="tapYellowButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="elx-kb-ZQD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vL-zK-s6x">
+                                <rect key="frame" x="112" y="285" width="169" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Красный"/>
+                                <connections>
+                                    <action selector="tapRedButton:" destination="Hdu-lZ-VmX" eventType="touchUpInside" id="jfV-RJ-PCe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G9u-OZ-U93"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="task 3" image="folder.fill" catalog="system" id="r8B-7K-Ywx"/>
+                    <connections>
+                        <outlet property="childView" destination="l83-g5-eN0" id="cXr-qy-Y9O"/>
+                        <segue destination="iJd-as-JSH" kind="modal" identifier="childViewSegue" id="vyP-1a-tZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U04-bu-pw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626.7175572519081" y="641.54929577464793"/>
+        </scene>
+        <!--ChildViewController-->
+        <scene sceneID="ElA-rL-YqL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRz-TV-wVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ChildViewController" title="ChildViewController" id="iJd-as-JSH" customClass="ChildViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3B-hs-exg">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="195"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zx-4h-n5K">
+                                <rect key="frame" x="0.0" y="0.0" width="169" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Зеленый"/>
+                                <connections>
+                                    <action selector="tapGreenButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="jUa-qd-94L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-rp-zxJ">
+                                <rect key="frame" x="0.0" y="128" width="169" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Красный"/>
+                                <connections>
+                                    <action selector="tapRedButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="udN-LC-TPY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-II-UND">
+                                <rect key="frame" x="177" y="0.0" width="169" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Желтый"/>
+                                <connections>
+                                    <action selector="tapYellowButton:" destination="iJd-as-JSH" eventType="touchUpInside" id="CDp-c4-722"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xb2-cg-UdL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PBc-o2-fUJ"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3505" y="548"/>
+        </scene>
+        <!--Task 1-->
+        <scene sceneID="8dY-m4-p5S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTn-40-7vd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Task 1" image="folder.fill" catalog="system" id="bYH-WB-gwP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ig-Qz-6Xf">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SPG-KU-qu8" kind="relationship" relationship="rootViewController" id="iOH-Yi-hl1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDJ-0d-FHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742.7480916030531" y="-792.25352112676057"/>
+        </scene>
+        <!--BlueViewController-->
+        <scene sceneID="nXP-tO-zzt">
+            <objects>
+                <viewController storyboardIdentifier="BlueViewController" title="BlueViewController" id="EI4-hN-kR7" customClass="BlueViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K21-A8-Avq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="y0f-d5-QD5"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q0Z-Yr-aaC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fA0-pF-XCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5625" y="-1645"/>
+        </scene>
+        <!--RedViewController-->
+        <scene sceneID="5eP-py-B57">
+            <objects>
+                <viewController storyboardIdentifier="RedViewController" title="RedViewController" id="Ats-Eb-LsR" customClass="RedViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2qe-YD-GtG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2aj-Ur-Heq"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aMk-xx-keI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWI-sA-Vjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6343" y="-1645"/>
+        </scene>
+        <!--ChangeColorViewController-->
+        <scene sceneID="Jvz-sr-CHa">
+            <objects>
+                <viewController storyboardIdentifier="ChangeColorViewController" title="ChangeColorViewController" id="ggx-xS-pso" customClass="ChangeColorViewController" customModule="ios_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qcQ-PJ-I42">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="gdQ-ow-Ugw">
+                                <rect key="frame" x="59" y="159" width="275" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdx-9y-bRV">
+                                <rect key="frame" x="92" y="281" width="208" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Выбрать зеленый"/>
+                                <connections>
+                                    <action selector="ChangeGreen:" destination="ggx-xS-pso" eventType="touchUpInside" id="n9U-mO-qnB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNv-8L-Adx">
+                                <rect key="frame" x="92" y="391" width="208" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Выбрать синий"/>
+                                <connections>
+                                    <action selector="ChangeBlue:" destination="ggx-xS-pso" eventType="touchUpInside" id="cG5-SB-GFb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvP-T8-GfJ">
+                                <rect key="frame" x="92" y="510" width="208" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Выбрать красный"/>
+                                <connections>
+                                    <action selector="ChangeRed:" destination="ggx-xS-pso" eventType="touchUpInside" id="kOH-Lq-p6l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="La9-6U-QMh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Task 2" image="folder.fill" catalog="system" id="9yU-JE-fOL"/>
+                    <navigationItem key="navigationItem" id="rUx-FQ-aYL"/>
+                    <connections>
+                        <outlet property="textLabel" destination="gdQ-ow-Ugw" id="KAJ-w8-AHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDS-g6-2oB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3532" y="-89"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VYv-9U-Pwc">
+            <objects>
+                <viewController id="E8O-un-VcJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2W-Gm-Edl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gl-pr-yWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1844" y="548"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zYv-ig-tXo"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

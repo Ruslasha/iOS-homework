@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4414896B2B0248E200A49BB5 /* task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414896A2B0248E200A49BB5 /* task1ViewController.swift */; };
+		4414896D2B02522B00A49BB5 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414896C2B02522B00A49BB5 /* GreenViewController.swift */; };
+		4414896F2B025A5200A49BB5 /* task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414896E2B025A5200A49BB5 /* task2ViewController.swift */; };
+		441489712B025C6F00A49BB5 /* ChangeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441489702B025C6F00A49BB5 /* ChangeColorViewController.swift */; };
+		441489732B026D5A00A49BB5 /* task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441489722B026D5A00A49BB5 /* task3ViewController.swift */; };
+		441489752B026D6B00A49BB5 /* ViewConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441489742B026D6B00A49BB5 /* ViewConteiner.swift */; };
+		447058CA2B02991D006AB7C1 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447058C92B02991D006AB7C1 /* ChildViewController.swift */; };
+		44BC15072B0243120022EFE7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC15062B0243120022EFE7 /* TabBarController.swift */; };
 		44FBD0972AFE05610061F6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD0962AFE05610061F6A7 /* AppDelegate.swift */; };
 		44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */; };
 		44FBD09B2AFE05610061F6A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD09A2AFE05610061F6A7 /* ViewController.swift */; };
@@ -17,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4414896A2B0248E200A49BB5 /* task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = task1ViewController.swift; path = "ios-homework/task1ViewController.swift"; sourceTree = SOURCE_ROOT; };
+		4414896C2B02522B00A49BB5 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		4414896E2B025A5200A49BB5 /* task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task2ViewController.swift; sourceTree = "<group>"; };
+		441489702B025C6F00A49BB5 /* ChangeColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorViewController.swift; sourceTree = "<group>"; };
+		441489722B026D5A00A49BB5 /* task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3ViewController.swift; sourceTree = "<group>"; };
+		441489742B026D6B00A49BB5 /* ViewConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConteiner.swift; sourceTree = "<group>"; };
+		447058C92B02991D006AB7C1 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		44BC15062B0243120022EFE7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		44FBD0932AFE05610061F6A7 /* ios-homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FBD0962AFE05610061F6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +78,14 @@
 				44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */,
 				44FBD09A2AFE05610061F6A7 /* ViewController.swift */,
 				44FBD09C2AFE05610061F6A7 /* Main.storyboard */,
+				441489722B026D5A00A49BB5 /* task3ViewController.swift */,
+				447058C92B02991D006AB7C1 /* ChildViewController.swift */,
+				441489742B026D6B00A49BB5 /* ViewConteiner.swift */,
+				441489702B025C6F00A49BB5 /* ChangeColorViewController.swift */,
+				4414896A2B0248E200A49BB5 /* task1ViewController.swift */,
+				4414896E2B025A5200A49BB5 /* task2ViewController.swift */,
+				4414896C2B02522B00A49BB5 /* GreenViewController.swift */,
+				44BC15062B0243120022EFE7 /* TabBarController.swift */,
 				44FBD0A22AFE05630061F6A7 /* Assets.xcassets */,
 				44FBD0A42AFE05630061F6A7 /* LaunchScreen.storyboard */,
 				44FBD0A72AFE05630061F6A7 /* Info.plist */,
@@ -141,10 +165,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4414896F2B025A5200A49BB5 /* task2ViewController.swift in Sources */,
 				44FBD09B2AFE05610061F6A7 /* ViewController.swift in Sources */,
+				4414896B2B0248E200A49BB5 /* task1ViewController.swift in Sources */,
 				44FBD0972AFE05610061F6A7 /* AppDelegate.swift in Sources */,
 				44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */,
+				441489712B025C6F00A49BB5 /* ChangeColorViewController.swift in Sources */,
+				44BC15072B0243120022EFE7 /* TabBarController.swift in Sources */,
 				44FBD0A12AFE05610061F6A7 /* ios_homework.xcdatamodeld in Sources */,
+				441489752B026D6B00A49BB5 /* ViewConteiner.swift in Sources */,
+				4414896D2B02522B00A49BB5 /* GreenViewController.swift in Sources */,
+				441489732B026D5A00A49BB5 /* task3ViewController.swift in Sources */,
+				447058CA2B02991D006AB7C1 /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +189,8 @@
 				44FBD09D2AFE05610061F6A7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = "ios-homework";
+			sourceTree = SOURCE_ROOT;
 		};
 		44FBD0A42AFE05630061F6A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -296,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +357,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
