@@ -10,6 +10,7 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
     
     let imageView = UIImageView()
+    let labelImage = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +31,16 @@ class PhotoCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25),
+        ])
+        
+        self.contentView.addSubview(labelImage)
+        labelImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            
+            labelImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            labelImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            labelImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
     

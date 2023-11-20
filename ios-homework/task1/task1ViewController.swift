@@ -10,7 +10,7 @@ class task1ViewController: UIViewController {
     
     var collectionView: UICollectionView!
     
-    let source: [Photo] = Source.randomPhotos(with: 10)
+    let source: [Photo] = Source.randomPhotos(with: 15)
     
     override func viewDidLoad() {
         
@@ -58,6 +58,7 @@ extension task1ViewController:UICollectionViewDataSource {
         }
         
         cell.imageView.image = UIImage(named: source[indexPath.item].imageName)
+        cell.labelImage.text = "\(source[indexPath.item].imageName)"
         return cell
     }
     
