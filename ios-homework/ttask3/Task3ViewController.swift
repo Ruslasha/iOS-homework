@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-final class task3ViewController: UIViewController {
+class Task3ViewController: UIViewController {
 
     private let scrollView = UIScrollView()
     
@@ -26,7 +26,7 @@ final class task3ViewController: UIViewController {
         setupButtons()
     }
 
-    func setupScrollView() {
+    private func setupScrollView() {
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         
         let imageNames = ["Image1", "Image2", "Image3", "Image4"]
@@ -43,7 +43,7 @@ final class task3ViewController: UIViewController {
         view.addSubview(scrollView)
     }
 
-    func setupLabelDescription() {
+    private func setupLabelDescription() {
         labelDescription.text = "Below is the world map!"
         labelDescription.font = UIFont.boldSystemFont(ofSize: 24)
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ final class task3ViewController: UIViewController {
         ])
     }
 
-    func setupMapView() {
+    private func setupMapView() {
         mapView.mapType = .standard
         mapView.showsUserLocation = true
         mapView.layer.cornerRadius = 20
@@ -71,7 +71,7 @@ final class task3ViewController: UIViewController {
         ])
     }
 
-    func setupButtons() {
+    private func setupButtons() {
         buttonBlue.translatesAutoresizingMaskIntoConstraints = false
         buttonBlue.setTitle("Button blue", for: .normal)
         buttonBlue.backgroundColor = .blue

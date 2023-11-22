@@ -19,7 +19,7 @@ struct SettingsOption {
     let hanler: (() -> Void)
 }
 
-class task2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Task2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
@@ -49,7 +49,7 @@ class task2ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return table
     }()
     
-    var models = [Section]()
+    private var models = [Section]()
     override func viewDidLoad() {
         super.viewDidLoad()
         Configure()
@@ -61,7 +61,7 @@ class task2ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    func Configure() {
+    private func Configure() {
         models.append(Section(title: "General", options:  [
             SettingsOption(title: "Wifi", icon: UIImage(systemName: "house")!, iconBackgroundColor: .systemPink) {
                 

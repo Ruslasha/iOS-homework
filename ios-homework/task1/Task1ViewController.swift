@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class task1ViewController: UIViewController {
+class Task1ViewController: UIViewController {
     
     private var collectionView: UICollectionView!
     private var searchBar: UISearchBar!
@@ -67,7 +67,7 @@ class task1ViewController: UIViewController {
     }
 }
 
-extension task1ViewController:UICollectionViewDataSource {
+extension Task1ViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         source.count
     }
@@ -101,7 +101,7 @@ extension task1ViewController:UICollectionViewDataSource {
     }
 }
 
-extension task1ViewController: UIGestureRecognizerDelegate {
+extension Task1ViewController: UIGestureRecognizerDelegate {
     @objc func handleTapOutsideSearchBar() {
         searchBar.resignFirstResponder()
     }
