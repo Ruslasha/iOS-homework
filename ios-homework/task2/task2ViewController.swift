@@ -1,60 +1,99 @@
-//
-//  task2ViewController.swift
-//  ios-homework
-//
-//  Created by Руслан Абрамов on 17.11.2023.
-//
+////
+////  task2ViewController.swift
+////  ios-homework
+////
+////  Created by Руслан Абрамов on 17.11.2023.
+////
 
 import UIKit
 
-class task2ViewController: UIViewController {
-    
-    var settings = SourceSettings.makeSettings()
-    
-    let tableView: UITableView = .init()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupTabelView()
-        
-        tableView.register(SettingCell.self, forCellReuseIdentifier: "SettingCell")
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-    }
+struct Section {
+    let title: String
+    let options: [SettingsOption]
 }
 
-extension task2ViewController: UITableViewDataSource {
+struct SettingsOption {
+    let title: String
+    let icon: UIImage
+    let iconBackgroundColor: UIColor
+    let hanler: (() -> Void)
+}
+
+class task2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return models.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        settings.count
+        return models[section].options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as? SettingCell else {
-            fatalError()
+        
+        let model = models[indexPath.section].options[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath) as? SettingTableViewCell else {
+            return UITableViewCell()
         }
         
-        cell.configure(setting: settings[indexPath.row])
+        cell.configure(with: model)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
-}
-
-extension task2ViewController: UITableViewDelegate {
+    private let tableView: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.identifier)
+        return table
+    }()
     
-}
-
-extension task2ViewController {
-    func setupTabelView() {
+    var models = [Section]()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Configure()
+        title = "Setting"
         view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate ([
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = view.bounds
+        
+    }
+    
+    func Configure() {
+        models.append(Section(title: "General", options:  [
+            SettingsOption(title: "Wifi", icon: UIImage(systemName: "house")!, iconBackgroundColor: .systemPink) {
+                
+            },
+            SettingsOption(title: "Bluetooth", icon: UIImage(systemName: "house")!, iconBackgroundColor: .link) {
+                
+            },
+            SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane")!, iconBackgroundColor: .systemGreen) {
+                
+            },
+            SettingsOption(title: "iCloud", icon: UIImage(systemName: "cloud")!, iconBackgroundColor: .systemOrange) {
+                
+            },
+            SettingsOption(title: "Wifi", icon: UIImage(systemName: "house")!, iconBackgroundColor: .systemPink) {
+                
+            },
+        ]))
+        
+        models.append(Section(title: "Other", options:  [
+            SettingsOption(title: "Основное", icon: UIImage(systemName: "house")!, iconBackgroundColor: .brown) {
+                
+            },
+            SettingsOption(title: "Звуки", icon: UIImage(systemName: "house")!, iconBackgroundColor: .cyan) {
+                
+            },
+            SettingsOption(title: "Не беспокоить", icon: UIImage(systemName: "airplane")!, iconBackgroundColor: .gray) {
+                
+            },
+            SettingsOption(title: "Уведомления", icon: UIImage(systemName: "cloud")!, iconBackgroundColor: .systemCyan) {
+                
+            },
+        ]))
+        
     }
 }

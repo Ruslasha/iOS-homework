@@ -13,10 +13,9 @@
 		442AA20D2B07800E00ECDD0C /* task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AA20C2B07800E00ECDD0C /* task2ViewController.swift */; };
 		442AA20F2B07801E00ECDD0C /* task3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442AA20E2B07801E00ECDD0C /* task3ViewController.storyboard */; };
 		442AA2112B07803300ECDD0C /* task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AA2102B07803300ECDD0C /* task3ViewController.swift */; };
-		44D89A1C2B0B47E600CF6E1C /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D89A1B2B0B47E600CF6E1C /* Source.swift */; };
-		44D89A1E2B0B552300CF6E1C /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D89A1D2B0B552300CF6E1C /* SettingCell.swift */; };
 		44E3C9122B0A1A4500F0C56D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E3C9112B0A1A4500F0C56D /* PhotoCell.swift */; };
 		44E3C9142B0A1E5100F0C56D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E3C9132B0A1E5100F0C56D /* Source.swift */; };
+		44EC713C2B0B8B6200F852EB /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC713B2B0B8B6200F852EB /* SettingTableViewCell.swift */; };
 		44FBD0972AFE05610061F6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD0962AFE05610061F6A7 /* AppDelegate.swift */; };
 		44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */; };
 		44FBD09B2AFE05610061F6A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD09A2AFE05610061F6A7 /* ViewController.swift */; };
@@ -33,10 +32,9 @@
 		442AA20C2B07800E00ECDD0C /* task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task2ViewController.swift; sourceTree = "<group>"; };
 		442AA20E2B07801E00ECDD0C /* task3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = task3ViewController.storyboard; sourceTree = "<group>"; };
 		442AA2102B07803300ECDD0C /* task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3ViewController.swift; sourceTree = "<group>"; };
-		44D89A1B2B0B47E600CF6E1C /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		44D89A1D2B0B552300CF6E1C /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		44E3C9112B0A1A4500F0C56D /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		44E3C9132B0A1E5100F0C56D /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		44EC713B2B0B8B6200F852EB /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		44FBD0932AFE05610061F6A7 /* ios-homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FBD0962AFE05610061F6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,8 +73,7 @@
 			children = (
 				442AA20A2B07800400ECDD0C /* task2ViewController.storyboard */,
 				442AA20C2B07800E00ECDD0C /* task2ViewController.swift */,
-				44D89A1D2B0B552300CF6E1C /* SettingCell.swift */,
-				44D89A1B2B0B47E600CF6E1C /* Source.swift */,
+				44EC713B2B0B8B6200F852EB /* SettingTableViewCell.swift */,
 			);
 			path = task2;
 			sourceTree = "<group>";
@@ -203,11 +200,10 @@
 				442AA2112B07803300ECDD0C /* task3ViewController.swift in Sources */,
 				442AA20D2B07800E00ECDD0C /* task2ViewController.swift in Sources */,
 				44E3C9122B0A1A4500F0C56D /* PhotoCell.swift in Sources */,
-				44D89A1E2B0B552300CF6E1C /* SettingCell.swift in Sources */,
+				44EC713C2B0B8B6200F852EB /* SettingTableViewCell.swift in Sources */,
 				44E3C9142B0A1E5100F0C56D /* Source.swift in Sources */,
 				442AA2092B077FF300ECDD0C /* task1ViewController.swift in Sources */,
 				44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */,
-				44D89A1C2B0B47E600CF6E1C /* Source.swift in Sources */,
 				44FBD0A12AFE05610061F6A7 /* ios_homework.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -387,6 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

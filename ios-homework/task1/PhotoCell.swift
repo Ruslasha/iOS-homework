@@ -17,12 +17,12 @@ class PhotoCell: UICollectionViewCell {
         setup()
     }
     
-    func setup() {
-        self.contentView.addSubview(imageView)
+    private func setup() {
+        contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
-        self.clipsToBounds = true
+        clipsToBounds = true
         
         NSLayoutConstraint.activate([
             
@@ -34,7 +34,7 @@ class PhotoCell: UICollectionViewCell {
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25),
         ])
         
-        self.contentView.addSubview(labelImage)
+        contentView.addSubview(labelImage)
         labelImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             
