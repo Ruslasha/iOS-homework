@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CharacterCell: UICollectionViewCell {
+final class CharacterCell: UICollectionViewCell {
     private let characterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -126,12 +126,16 @@ class CharacterCell: UICollectionViewCell {
         
         if let url = URL(string: character.image) {
             DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url) {
+                do {
+                    let data = try Data(contentsOf: url)
                     DispatchQueue.main.async {
                         self.characterImageView.image = UIImage(data: data)
                     }
+                } catch {
+                    print("Ошибка загрузки данных: \(error)")
                 }
             }
         }
+
     }
 }

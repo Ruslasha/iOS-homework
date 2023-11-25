@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CharacterDetailViewController: UIViewController {
+final class CharacterDetailViewController: UIViewController {
     private let character: Character
     
     private let nameLabel: UILabel = {
@@ -119,6 +119,8 @@ class CharacterDetailViewController: UIViewController {
             return circleView
     }()
     
+    private let networkServices = NetworkServices()
+    
     init(character: Character) {
         self.character = character
         super.init(nibName: nil, bundle: nil)
@@ -130,14 +132,15 @@ class CharacterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        prepareView()
+        loadData()
+    }
+    
+    private func prepareView() {
         let color = createColor(red: 34, green: 39, blue: 45)
         view.backgroundColor = color
-        
         addSubview()
         setupConstraint()
-    
-        loadData()
     }
     
     private func createColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
@@ -160,6 +163,20 @@ class CharacterDetailViewController: UIViewController {
         view.addSubview(linkContentView)
         view.addSubview(circleView)
     }
+    
+    private func loadData() {
+            networkServices.loadData(for: character) { [weak self] result in
+                switch result {
+                case .success(let characterDetails):
+                    DispatchQueue.main.async {
+                        self?.updateUI(with: characterDetails)
+                    }
+                case .failure(let error):
+                    print("Error loading data: \(error.localizedDescription)")
+                }
+            }
+        }
+
     
     private func setupConstraint() {
         NSLayoutConstraint.activate([
@@ -222,35 +239,6 @@ class CharacterDetailViewController: UIViewController {
         ])
     }
     
-    private func loadData() {
-        
-        guard let url = URL(string: "https://rickandmortyapi.com/api/character/\(character.id)") else {
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let data = data else {
-                print("No data received")
-                return
-            }
-            
-            do {
-                let characterDetails = try JSONDecoder().decode(Character.self, from: data)
-                DispatchQueue.main.async {
-                    self.updateUI(with: characterDetails)
-                }
-            } catch {
-                print("Error decoding data: \(error.localizedDescription)")
-            }
-        }.resume()
-    }
-    
-    
     @objc func linkTapped(_ sender: UIButton) {
         guard let linkTitle = sender.title(for: .normal) else { return }
         
@@ -299,16 +287,19 @@ class CharacterDetailViewController: UIViewController {
                
         createLink()
 
-        if let url = URL(string: characterDetails.image) {
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url) {
-                    DispatchQueue.main.async {
-                        self.characterImageView.image = UIImage(data: data)
-                    }
-                    
-                }
-            }
-        }
+        if URL(string: characterDetails.image) != nil {
+                 networkServices.loadImage(from: characterDetails.image) { [weak self] result in
+                     switch result {
+                     case .success(let image):
+                         DispatchQueue.main.async {
+                             self?.characterImageView.image = image
+                         }
+                     case .failure(let error):
+                         print("Error loading image: \(error.localizedDescription)")
+                     }
+                 }
+             }
+
     }
 }
 

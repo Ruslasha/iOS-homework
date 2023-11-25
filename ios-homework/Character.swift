@@ -29,3 +29,11 @@ struct Location: Codable {
     let name: String
     let url: String
 }
+
+struct Results: Decodable {
+    let characters: [Character]
+    
+    private enum CodingKeys: String, CodingKey {
+        case characters = "results"
+    }
+}

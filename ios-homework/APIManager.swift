@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIManager {
+final class APIManager {
     static let shared = APIManager()
     private let baseURL = "https://rickandmortyapi.com/api/character"
     
@@ -35,12 +35,6 @@ class APIManager {
             }
         }.resume()
     }
+    
 }
 
-struct Results: Decodable {
-    let characters: [Character]
-    
-    private enum CodingKeys: String, CodingKey {
-        case characters = "results"
-    }
-}
