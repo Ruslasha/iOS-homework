@@ -23,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width - 20
-        let height: CGFloat = 200
+        let height: CGFloat = 150
         
         return CGSize(width: width, height: height)
     }
@@ -40,6 +40,12 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let red = CGFloat(46) / 255.0
+        let green = CGFloat(46) / 255.0
+        let blue = CGFloat(46) / 255.0
+
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 10
@@ -51,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CharacterCell.self, forCellWithReuseIdentifier: "CharacterCell")
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = color
         view.addSubview(collectionView)
         
         

@@ -15,10 +15,17 @@ struct Character: Decodable {
     let species: String
     let image: String
     let gender: Gender
+    let origin, location: Location
+    let episode: [String]
 }
 
 enum Gender: String, Codable {
     case female = "Female"
     case male = "Male"
     case unknown = "unknown"
+}
+
+struct Location: Codable {
+    let name: String
+    let url: String
 }

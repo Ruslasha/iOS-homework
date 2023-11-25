@@ -19,6 +19,7 @@ class CharacterCell: UICollectionViewCell {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -26,6 +27,15 @@ class CharacterCell: UICollectionViewCell {
     private let statusLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor.white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let locationLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -48,28 +58,36 @@ class CharacterCell: UICollectionViewCell {
         contentView.addSubview(characterImageView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(statusLabel)
+        contentView.addSubview(locationLabel)
         
         NSLayoutConstraint.activate([
             characterImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            characterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            characterImageView.heightAnchor.constraint(equalToConstant: 150),
-            
-            nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            characterImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            characterImageView.widthAnchor.constraint(equalTo: characterImageView.heightAnchor),
+
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             statusLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            statusLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            statusLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
             statusLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            
+            locationLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 4),
+            locationLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
+            locationLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
         ])
     }
     
     private func setupCellAppearance() {
-        layer.backgroundColor = UIColor.systemPink.cgColor
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor.systemPink.cgColor
+        let red = CGFloat(66) / 255.0
+        let green = CGFloat(66) / 255.0
+        let blue = CGFloat(66) / 255.0
+
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        layer.backgroundColor = color.cgColor
         layer.cornerRadius = 15
         layer.masksToBounds = true
     }
@@ -77,7 +95,14 @@ class CharacterCell: UICollectionViewCell {
     
     func configure(with character: Character) {
         nameLabel.text = character.name
-        statusLabel.text = "Status: \(character.status)"
+        var circleLive = ""
+        if character.status == "Alive" {
+            circleLive = "\u{1F7E2}"
+        } else {
+            circleLive = "\u{1F534}"
+        }
+        statusLabel.text = circleLive + " \(character.status)"
+        locationLabel.text = "\u{1F30E} \(character.location.name)"
         
         if let url = URL(string: character.image) {
             DispatchQueue.global().async {
