@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44D2CF6E2B0F84750053D6B9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2CF6D2B0F84750053D6B9 /* Character.swift */; };
+		44D2CF702B0F84B90053D6B9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2CF6F2B0F84B90053D6B9 /* APIManager.swift */; };
+		44D2CF722B0F87440053D6B9 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2CF712B0F87440053D6B9 /* CharacterCell.swift */; };
+		44D2CF742B0F8A990053D6B9 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2CF732B0F8A990053D6B9 /* CharacterDetailViewController.swift */; };
+		44D2CF782B11EB760053D6B9 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2CF772B11EB760053D6B9 /* NetworkServices.swift */; };
 		44FBD0972AFE05610061F6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD0962AFE05610061F6A7 /* AppDelegate.swift */; };
 		44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */; };
 		44FBD09B2AFE05610061F6A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBD09A2AFE05610061F6A7 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44D2CF6D2B0F84750053D6B9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		44D2CF6F2B0F84B90053D6B9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		44D2CF712B0F87440053D6B9 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		44D2CF732B0F8A990053D6B9 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		44D2CF772B11EB760053D6B9 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		44FBD0932AFE05610061F6A7 /* ios-homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FBD0962AFE05610061F6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +71,16 @@
 				44FBD0962AFE05610061F6A7 /* AppDelegate.swift */,
 				44FBD0982AFE05610061F6A7 /* SceneDelegate.swift */,
 				44FBD09A2AFE05610061F6A7 /* ViewController.swift */,
+				44D2CF712B0F87440053D6B9 /* CharacterCell.swift */,
 				44FBD09C2AFE05610061F6A7 /* Main.storyboard */,
 				44FBD0A22AFE05630061F6A7 /* Assets.xcassets */,
 				44FBD0A42AFE05630061F6A7 /* LaunchScreen.storyboard */,
 				44FBD0A72AFE05630061F6A7 /* Info.plist */,
 				44FBD09F2AFE05610061F6A7 /* ios_homework.xcdatamodeld */,
+				44D2CF6D2B0F84750053D6B9 /* Character.swift */,
+				44D2CF6F2B0F84B90053D6B9 /* APIManager.swift */,
+				44D2CF772B11EB760053D6B9 /* NetworkServices.swift */,
+				44D2CF732B0F8A990053D6B9 /* CharacterDetailViewController.swift */,
 			);
 			path = "ios-homework";
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D2CF702B0F84B90053D6B9 /* APIManager.swift in Sources */,
 				44FBD09B2AFE05610061F6A7 /* ViewController.swift in Sources */,
 				44FBD0972AFE05610061F6A7 /* AppDelegate.swift in Sources */,
+				44D2CF782B11EB760053D6B9 /* NetworkServices.swift in Sources */,
+				44D2CF722B0F87440053D6B9 /* CharacterCell.swift in Sources */,
+				44D2CF6E2B0F84750053D6B9 /* Character.swift in Sources */,
+				44D2CF742B0F8A990053D6B9 /* CharacterDetailViewController.swift in Sources */,
 				44FBD0992AFE05610061F6A7 /* SceneDelegate.swift in Sources */,
 				44FBD0A12AFE05610061F6A7 /* ios_homework.xcdatamodeld in Sources */,
 			);
@@ -296,6 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GAVDTRGBHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-homework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
