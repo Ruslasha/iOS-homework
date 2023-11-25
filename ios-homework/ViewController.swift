@@ -40,12 +40,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let red = CGFloat(46) / 255.0
-        let green = CGFloat(46) / 255.0
-        let blue = CGFloat(46) / 255.0
-
-        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        
+        let color = createColor(red: 46, green: 46, blue: 46)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 10
@@ -69,7 +64,11 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         }
     }
     
-    func showCharacterDetails(_ character: Character) {
+    private func createColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
+    }
+    
+    private func showCharacterDetails(_ character: Character) {
         let detailViewController = CharacterDetailViewController(character: character)
         
         present(detailViewController, animated: true, completion: nil)

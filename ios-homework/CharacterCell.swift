@@ -40,6 +40,14 @@ class CharacterCell: UICollectionViewCell {
         return label
     }()
     
+    private let circleView: UIView = {
+            let circleView = UIView()
+            circleView.layer.cornerRadius = 8
+            circleView.clipsToBounds = true
+            circleView.translatesAutoresizingMaskIntoConstraints = false
+            return circleView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -55,11 +63,19 @@ class CharacterCell: UICollectionViewCell {
     }
     
     private func setupViews() {
+        addSubview()
+        setupConstraint()
+    }
+    
+    private func addSubview() {
         contentView.addSubview(characterImageView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(statusLabel)
         contentView.addSubview(locationLabel)
-        
+        contentView.addSubview(circleView)
+    }
+    
+    private func setupConstraint() {
         NSLayoutConstraint.activate([
             characterImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -70,8 +86,13 @@ class CharacterCell: UICollectionViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
+            circleView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            circleView.widthAnchor.constraint(equalToConstant: 16),
+            circleView.heightAnchor.constraint(equalToConstant: 16),
+            circleView.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
+            
             statusLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            statusLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
+            statusLabel.leadingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: 5),
             statusLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             locationLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 4),
@@ -79,29 +100,28 @@ class CharacterCell: UICollectionViewCell {
             locationLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
         ])
+        
     }
     
     private func setupCellAppearance() {
-        let red = CGFloat(66) / 255.0
-        let green = CGFloat(66) / 255.0
-        let blue = CGFloat(66) / 255.0
-
-        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        let color = createColor(red: 66, green: 66, blue: 66)
         layer.backgroundColor = color.cgColor
         layer.cornerRadius = 15
         layer.masksToBounds = true
     }
 
+    private func createColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
+    }
     
     func configure(with character: Character) {
         nameLabel.text = character.name
-        var circleLive = ""
         if character.status == "Alive" {
-            circleLive = "\u{1F7E2}"
+            circleView.backgroundColor = .green
         } else {
-            circleLive = "\u{1F534}"
+            circleView.backgroundColor = .red
         }
-        statusLabel.text = circleLive + " \(character.status)"
+        statusLabel.text = " \(character.status)"
         locationLabel.text = "\u{1F30E} \(character.location.name)"
         
         if let url = URL(string: character.image) {

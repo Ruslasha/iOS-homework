@@ -111,6 +111,14 @@ class CharacterDetailViewController: UIViewController {
         return linkContentView
     }()
     
+    private let circleView: UIView = {
+            let circleView = UIView()
+            circleView.layer.cornerRadius = 8
+            circleView.clipsToBounds = true
+            circleView.translatesAutoresizingMaskIntoConstraints = false
+            return circleView
+    }()
+    
     init(character: Character) {
         self.character = character
         super.init(nibName: nil, bundle: nil)
@@ -123,13 +131,20 @@ class CharacterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let red = CGFloat(34) / 255.0
-        let green = CGFloat(39) / 255.0
-        let blue = CGFloat(45) / 255.0
-
-        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        let color = createColor(red: 34, green: 39, blue: 45)
         view.backgroundColor = color
         
+        addSubview()
+        setupConstraint()
+    
+        loadData()
+    }
+    
+    private func createColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
+    }
+    
+    private func addSubview() {
         view.addSubview(characterImageView)
         view.addSubview(nameLabel)
         view.addSubview(idLabel)
@@ -143,7 +158,10 @@ class CharacterDetailViewController: UIViewController {
         view.addSubview(episodesLabel)
         view.addSubview(linkSkrollView)
         view.addSubview(linkContentView)
-        
+        view.addSubview(circleView)
+    }
+    
+    private func setupConstraint() {
         NSLayoutConstraint.activate([
             characterImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             characterImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -158,8 +176,14 @@ class CharacterDetailViewController: UIViewController {
             statusTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             statusTitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
+            circleView.topAnchor.constraint(equalTo: statusTitleLabel.bottomAnchor),
+            circleView.widthAnchor.constraint(equalToConstant: 16),
+            circleView.heightAnchor.constraint(equalToConstant: 16),
+            circleView.leadingAnchor.constraint(equalTo: view.leadingAnchor,  constant: 16),
+            
+            
             statusLabel.topAnchor.constraint(equalTo: statusTitleLabel.bottomAnchor),
-            statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            statusLabel.leadingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: 8),
             statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
             speciesGenderTitleLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 8),
@@ -190,16 +214,12 @@ class CharacterDetailViewController: UIViewController {
             linkSkrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             linkSkrollView.topAnchor.constraint(equalTo: episodesTitleLabel.bottomAnchor),
             linkSkrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            linkSkrollView.heightAnchor.constraint(equalToConstant: 300),
 
             linkContentView.leadingAnchor.constraint(equalTo: linkSkrollView.leadingAnchor),
             linkContentView.trailingAnchor.constraint(equalTo: linkSkrollView.trailingAnchor),
             linkContentView.topAnchor.constraint(equalTo: linkSkrollView.topAnchor),
             linkContentView.widthAnchor.constraint(equalTo: linkSkrollView.widthAnchor),
-            linkContentView.heightAnchor.constraint(equalToConstant: 1000),
         ])
-
-        loadData()
     }
     
     private func loadData() {
@@ -239,22 +259,7 @@ class CharacterDetailViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    private func updateUI(with characterDetails: Character) {
-        nameLabel.text = characterDetails.name
-        statusTitleLabel.text = "Live status:"
-        var circleLive = ""
-        if characterDetails.status == "Alive" {
-            circleLive = "\u{1F7E2}"
-        } else {
-            circleLive = "\u{1F534}"
-        }
-        statusLabel.text = circleLive + " \(characterDetails.status)"
-        speciesGenderTitleLabel.text = "Species and gender: "
-        speciesGenderLabel.text = "\(characterDetails.species) (\(characterDetails.gender))"
-        originLocationTitleLabel.text = "Last known location:"
-        originLocationLabel.text = "\(characterDetails.location.name)"
-        episodesTitleLabel.text = "Episodes: "
-               
+    private func createLink() {
         var links: [UIButton] = []
                
         for string in character.episode {
@@ -275,6 +280,24 @@ class CharacterDetailViewController: UIViewController {
             ])
         }
         linkSkrollView.contentSize = linkContentView.bounds.size
+    }
+    
+    private func updateUI(with characterDetails: Character) {
+        nameLabel.text = characterDetails.name
+        statusTitleLabel.text = "Live status:"
+        if characterDetails.status == "Alive" {
+            circleView.backgroundColor = .green
+        } else {
+            circleView.backgroundColor = .red
+        }
+        statusLabel.text = " \(characterDetails.status)"
+        speciesGenderTitleLabel.text = "Species and gender: "
+        speciesGenderLabel.text = "\(characterDetails.species) (\(characterDetails.gender))"
+        originLocationTitleLabel.text = "Last known location:"
+        originLocationLabel.text = "\(characterDetails.location.name)"
+        episodesTitleLabel.text = "Episodes: "
+               
+        createLink()
 
         if let url = URL(string: characterDetails.image) {
             DispatchQueue.global().async {
